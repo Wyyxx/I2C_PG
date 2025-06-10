@@ -24,7 +24,7 @@ Repositorio oficial del proyecto desarrollado en colaboración con:
 <div align="center">
 
 ⚠️ **CONTENIDO PROTEGIDO Y RESTRINGIDO** ⚠️  
-*Cualquier uso indebido será sancionado conforme a la ley.*
+*Cualquier uso no autorizado será sancionado conforme a la ley.*
 
 </div>
 
@@ -93,6 +93,7 @@ Para solicitudes de autorización o dudas, contactar por los medios oficiales:
 - 📧 **Correo:** transparencia@i2c.com.mx
 - 🏢 **Dirección:** Av. Cuauhtémoc # 1800 – 3 Col. Cuauhtémoc Edificio Empresarial C.P. 31020
 - 📱 **Teléfono:** +52 (614) 415 0986 
+- 📱 **Teléfono:** +52 (614) 261 4322
 
 ---
 
