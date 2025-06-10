@@ -5,8 +5,6 @@
 ![Estado](https://img.shields.io/badge/Estado-Protegido-red)
 ![Tipo](https://img.shields.io/badge/Tipo-Oficial-blue)
 ![Licencia](https://img.shields.io/badge/Licencia-Privada-yellow)
-![Framework](https://img.shields.io/badge/Framework-Next.js-black)
-![Python](https://img.shields.io/badge/Python-3.13-yellow)
 
 </div>
 
