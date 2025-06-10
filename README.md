@@ -17,12 +17,6 @@ Repositorio oficial del proyecto desarrollado en colaboración con:
 - 🧪 **FECTI** (Fondo Estatal para la Ciencia, la Tecnología y la Innovación)  
 - 🏛️ **SECCTI** (Secretaría de Educación, Ciencia, Tecnología e Innovación)
 
-Sistema integrado de reconocimiento óptico de caracteres (OCR) que combina:
-
-- ⚡ **Frontend**: Next.js para una interfaz moderna y responsive
-- 🐍 **Backend**: Python con Flask para procesamiento OCR
-- 🔍 **OCR Engine**: Integración con Tesseract y herramientas avanzadas de procesamiento de PDF
-
 ---
 
 ## 🛡️ Aviso de Protección Legal
@@ -30,7 +24,7 @@ Sistema integrado de reconocimiento óptico de caracteres (OCR) que combina:
 <div align="center">
 
 ⚠️ **CONTENIDO PROTEGIDO Y RESTRINGIDO** ⚠️  
-*Cualquier uso indebido será sancionado conforme a la ley.*
+*Cualquier uso no autorizado será sancionado conforme a la ley.*
 
 </div>
 
@@ -99,6 +93,7 @@ Para solicitudes de autorización o dudas, contactar por los medios oficiales:
 - 📧 **Correo:** transparencia@i2c.com.mx
 - 🏢 **Dirección:** Av. Cuauhtémoc # 1800 – 3 Col. Cuauhtémoc Edificio Empresarial C.P. 31020
 - 📱 **Teléfono:** +52 (614) 415 0986 
+- 📱 **Teléfono:** +52 (614) 261 4322
 
 ---
 
