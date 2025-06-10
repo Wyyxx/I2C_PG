@@ -1,29 +1,72 @@
-# Proyecto protegido – FECTI / SECCTI
+# 🔒 Proyecto FECTI / SECCTI
 
-Este repositorio forma parte de un proyecto oficial desarrollado en colaboración con la  
-**FECTI (Fondo Estatal para la Ciencia, la Tecnología y la Innovación)** y la  
-**SECCTI (Secretaría de Educación, Ciencia, Tecnología e Innovación).**
+<div align="center">
 
-## 🛡️ Aviso de protección
+![Estado](https://img.shields.io/badge/Estado-Protegido-red)
+![Tipo](https://img.shields.io/badge/Tipo-Oficial-blue)
+![Licencia](https://img.shields.io/badge/Licencia-Privada-yellow)
 
-Todo el contenido de este repositorio (código, documentación y recursos) está **protegido y restringido** para su uso **exclusivo** dentro del marco del proyecto autorizado por FECTI y SECCTI.
+</div>
 
-Queda **prohibido**:
+## 📋 Descripción
 
-- Usar, reproducir o modificar este código sin autorización escrita.
-- Compartir parcial o totalmente el contenido con terceros no involucrados en el proyecto.
-- Publicar en plataformas públicas (GitHub, GitLab, etc.) sin el consentimiento institucional.
+Este repositorio alberga un proyecto oficial desarrollado en colaboración con:
 
-## ⚖️ Derechos Reservados
+- **FECTI** (Fondo Estatal para la Ciencia, la Tecnología y la Innovación)
+- **SECCTI** (Secretaría de Educación, Ciencia, Tecnología e Innovación)
 
-Este trabajo es propiedad del Gobierno del Estado y está protegido conforme a las leyes nacionales de derechos de autor y propiedad intelectual. Cualquier uso indebido será sancionado conforme a lo establecido por la ley.
+## 🛡️ Aviso de Protección Legal
 
-## 📌 Destinado para:
+<div align="center">
 
-- Evaluación técnica institucional.
-- Fines académicos o de innovación tecnológica aprobados oficialmente.
-- Uso interno por personal autorizado del proyecto.
+⚠️ **CONTENIDO PROTEGIDO Y RESTRINGIDO** ⚠️
+
+</div>
+
+### 🚫 Restricciones
+
+Todo el contenido de este repositorio está protegido bajo las siguientes condiciones:
+
+<div align="center">
+
+| Actividad | Estado |
+|:---------:|:------:|
+| Uso sin autorización | ❌ Prohibido |
+| Reproducción | ❌ Prohibido |
+| Modificación sin permiso | ❌ Prohibido |
+| Compartir con terceros | ❌ Prohibido |
+| Publicación pública | ❌ Prohibido |
+
+</div>
+
+## 🎯 Uso Autorizado
+
+Este proyecto está destinado exclusivamente para:
+
+- ✅ Evaluación técnica institucional
+- ✅ Fines académicos autorizados
+- ✅ Innovación tecnológica aprobada
+- ✅ Personal autorizado del proyecto
+
+## ⚖️ Marco Legal
+
+Este trabajo está protegido por:
+- 📜 Leyes nacionales de derechos de autor
+- 🔐 Normativas de propiedad intelectual
+- 📋 Políticas institucionales vigentes
+
+## 📞 Contacto
+
+Para solicitudes de autorización o consultas:
+- 📧 [Correo institucional]
+- 🏢 [Dirección física]
+- 📱 [Teléfono de contacto]
 
 ---
 
-© 2025 Gobierno del Estado – FECTI / SECCTI. Todos los derechos reservados.
+<div align="center">
+
+**© 2025 Gobierno del Estado – FECTI / SECCTI**  
+*Todos los derechos reservados*
+
+</div>
