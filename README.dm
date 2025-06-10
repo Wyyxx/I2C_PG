@@ -1,80 +1,89 @@
 # 🔒 Proyecto FECTI / SECCTI
 
-<div align="center">
 
-[![Estado](https://img.shields.io/badge/Estado-Protegido-red?style=for-the-badge)](https://img.shields.io/badge/Estado-Protegido-red)
-[![Tipo](https://img.shields.io/badge/Tipo-Oficial-blue?style=for-the-badge)](https://img.shields.io/badge/Tipo-Oficial-blue)
-[![Licencia](https://img.shields.io/badge/Licencia-Privada-yellow?style=for-the-badge)](https://img.shields.io/badge/Licencia-Privada-yellow)
 
-</div>
+![Estado](https://img.shields.io/badge/Estado-Protegido-red)
+![Tipo](https://img.shields.io/badge/Tipo-Oficial-blue)
+![Licencia](https://img.shields.io/badge/Licencia-Privada-yellow)
 
-## 📋 Descripción
 
-<div align="center">
-
-Este repositorio alberga un proyecto oficial desarrollado en colaboración con:
-
-**FECTI** _(Fondo Estatal para la Ciencia, la Tecnología y la Innovación)_  
-**SECCTI** _(Secretaría de Educación, Ciencia, Tecnología e Innovación)_
-
-</div>
-
-## 🛡️ Aviso de Protección Legal
-
-<div align="center">
-
-⚠️ **CONTENIDO PROTEGIDO Y RESTRINGIDO** ⚠️
-
-</div>
-
-### 🚫 Restricciones
-
-Todo el contenido de este repositorio está protegido bajo las siguientes condiciones:
-
-<div align="center">
-
-| Actividad                  |    Estado    |
-|:--------------------------|:------------:|
-| Uso sin autorización      | ❌ Prohibido |
-| Reproducción              | ❌ Prohibido |
-| Modificación sin permiso  | ❌ Prohibido |
-| Compartir con terceros    | ❌ Prohibido |
-| Publicación pública       | ❌ Prohibido |
-
-</div>
-
-## 🎯 Uso Autorizado
-
-Este proyecto está destinado exclusivamente para:
-
-<div align="center">
-
-✅ Evaluación técnica institucional  
-✅ Fines académicos autorizados  
-✅ Innovación tecnológica aprobada  
-✅ Personal autorizado del proyecto
-
-</div>
-
-## ⚖️ Marco Legal
-
-Este trabajo está protegido por:
-- 📜 Leyes nacionales de derechos de autor
-- 🔐 Normativas de propiedad intelectual
-- 📋 Políticas institucionales vigentes
-
-## 📞 Contacto
-
-Para solicitudes de autorización o consultas:
-- 📧 transparencia@i2c.com.mx
-- 🏢 Av. Cuauhtémoc # 1800 – 3 Col. Cuauhtémoc Edificio Empresarial C.P. 31020
-- 📱 +52 (614) 415 0986 
 
 ---
 
-<div align="center">
+## 📋 Descripción
 
-**© 2025 Gobierno del Estado – FECTI / SECCTI**  
+Repositorio oficial del proyecto desarrollado en colaboración con:
+
+- 🧪 **FECTI** (Fondo Estatal para la Ciencia, la Tecnología y la Innovación)  
+- 🏛️ **SECCTI** (Secretaría de Educación, Ciencia, Tecnología e Innovación)
+
+Este repositorio contiene contenido técnico y documentos restringidos, bajo protección legal y con acceso limitado.
+
+---
+
+## 🛡️ Aviso de Protección Legal
+
+
+
+⚠️ **CONTENIDO PROTEGIDO Y RESTRINGIDO** ⚠️  
+*Cualquier uso indebido será sancionado conforme a la ley.*
+
+
+
+---
+
+### 🚫 Restricciones
+
+
+
+| Actividad                         | Estado         |
+|----------------------------------|----------------|
+| Uso sin autorización             | ❌ Prohibido   |
+| Reproducción parcial o total     | ❌ Prohibido   |
+| Modificación sin permiso previo  | ❌ Prohibido   |
+| Distribución a terceros          | ❌ Prohibido   |
+| Publicación en medios públicos   | ❌ Prohibido   |
+
+
+
+---
+
+## 🎯 Uso Autorizado
+
+Destinado exclusivamente para:
+
+
+✅ Evaluación técnica institucional  
+✅ Fines académicos autorizados  
+✅ Proyectos de innovación tecnológica  
+✅ Personal autorizado del proyecto
+
+
+
+---
+
+## ⚖️ Marco Legal
+
+Este proyecto está protegido conforme a:
+
+- 📜 Ley Federal del Derecho de Autor  
+- 🔐 Normativas de Propiedad Intelectual  
+- 📋 Políticas Institucionales Vigentes
+
+---
+
+## 📞 Contacto
+
+Para solicitudes de autorización o dudas, contactar por los medios oficiales:
+
+- 📧 **Correo:** [correo institucional]  
+- 🏢 **Dirección:** [dirección física]  
+- 📱 **Teléfono:** [número de contacto]
+
+---
+
+
+
+© 2025 **Gobierno del Estado – FECTI / SECCTI**  
 *Todos los derechos reservados*
 
-</div>
