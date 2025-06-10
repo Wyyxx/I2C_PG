@@ -17,12 +17,6 @@ Repositorio oficial del proyecto desarrollado en colaboración con:
 - 🧪 **FECTI** (Fondo Estatal para la Ciencia, la Tecnología y la Innovación)  
 - 🏛️ **SECCTI** (Secretaría de Educación, Ciencia, Tecnología e Innovación)
 
-Sistema integrado de reconocimiento óptico de caracteres (OCR) que combina:
-
-- ⚡ **Frontend**: Next.js para una interfaz moderna y responsive
-- 🐍 **Backend**: Python con Flask para procesamiento OCR
-- 🔍 **OCR Engine**: Integración con Tesseract y herramientas avanzadas de procesamiento de PDF
-
 ---
 
 ## 🛡️ Aviso de Protección Legal
