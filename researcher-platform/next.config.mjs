@@ -1,14 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
-    unoptimized: true,
+    domains: [],
+    unoptimized: false,
   },
+  // Solo habilitar estas opciones si hay errores específicos que necesitas ignorar
+  // eslint: {
+  //   ignoreDuringBuilds: true,
+  // },
+  // typescript: {
+  //   ignoreBuildErrors: true,
+  // },
 }
 
 export default nextConfig
