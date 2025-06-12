@@ -57,27 +57,6 @@ Destinado exclusivamente para:
 | Base de Datos | PostgreSQL |
 | Herramientas | PDF2Image, PyTesseract |
 
-<!----
-
-## 📁 Estructura del Proyecto
-
-```
-|—— pagina_web/
-    |—— app.py
-    |—— config/
-        |—— database.py
-    |—— templates/
-        |—— base.html
-        |—— incompletos.html
-        |—— index.html
-        |—— registros.html
-    |—— uploads/
-    |—— utils/
-        |—— pdf_extractor.py
-```
---->
-
-
 ## ⚖️ Marco Legal
 
 Este proyecto está protegido conforme a:
@@ -103,3 +82,59 @@ Para solicitudes de autorización o dudas, contactar por los medios oficiales:
 *Todos los derechos reservados*
 
 </div>
+
+# PDF Processor
+
+Aplicación para procesar archivos PDF y extraer información relevante.
+
+## Requisitos Previos
+
+1. Node.js (versión 16 o superior)
+2. Python (versión 3.8 o superior)
+3. PostgreSQL
+
+## Instalación
+
+1. Instalar las dependencias del proyecto:
+```bash
+npm install
+```
+
+2. Instalar todas las dependencias (frontend y backend):
+```bash
+npm run install:all
+```
+
+3. Configurar la base de datos:
+   - Asegúrate de tener PostgreSQL instalado y corriendo
+   - Actualiza la contraseña en `backend/app/config/database.py`
+
+## Ejecución
+
+Para ejecutar tanto el frontend como el backend simultáneamente:
+
+```bash
+npm run dev
+```
+
+Esto iniciará:
+- Frontend en http://localhost:3000
+- Backend en http://localhost:8000
+
+## Estructura del Proyecto
+
+```
+pdf-processor-full/
+├── backend/              # Backend FastAPI
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── utils/
+│   │   └── config/
+│   └── requirements.txt
+├── pdf-processor/        # Frontend Next.js
+│   ├── src/
+│   │   ├── app/
+│   │   └── components/
+│   └── package.json
+└── package.json         # Scripts principales
+```
