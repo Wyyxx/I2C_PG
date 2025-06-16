@@ -22,6 +22,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const [isSheetOpen, setIsSheetOpen] = useState(false)
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -44,6 +45,10 @@ export default function Navbar() {
       }
     }
   }, [lastScrollY])
+
+  const handleLinkClick = () => {
+    setIsSheetOpen(false)
+  }
 
   return (
     <>
@@ -73,7 +78,7 @@ export default function Navbar() {
               <NavigationMenu className="hidden md:flex ml-4">
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-blue-700">Explorar</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="text-[#044caa]">Explorar</NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-2 bg-white">
                         <li className="row-span-3">
@@ -82,8 +87,8 @@ export default function Navbar() {
                               className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-gray-50 to-gray-100 p-6 no-underline outline-none focus:shadow-md"
                               href="/explorar"
                             >
-                              <div className="mb-2 mt-4 text-lg font-medium text-blue-900">Explorar</div>
-                              <p className="text-sm leading-tight text-blue-600">
+                              <div className="mb-2 mt-4 text-lg font-medium text-[#044caa]">Explorar</div>
+                              <p className="text-sm leading-tight text-[#044caa]">
                                 Descubre investigadores, proyectos e instituciones en Chihuahua.
                               </p>
                             </a>
@@ -106,14 +111,14 @@ export default function Navbar() {
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <Link href="/proyectos" legacyBehavior passHref>
-                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-blue-700")}>
+                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-[#044caa]")}>
                         Proyectos
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <Link href="/publicaciones" legacyBehavior passHref>
-                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-blue-700")}>
+                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-[#044caa]")}>
                         Publicaciones
                       </NavigationMenuLink>
                     </Link>
@@ -123,7 +128,7 @@ export default function Navbar() {
             </div>
 
             <div className="flex items-center gap-4">
-              <Button className="hidden md:flex bg-blue-700 text-white hover:bg-blue-800 px-3 py-1 h-9" asChild>
+              <Button className="hidden md:flex bg-[#916bc4] text-white hover:bg-[#7d5baa] px-3 py-1 h-9" asChild>
                 <a href="https://i2c.com.mx/" target="_blank" rel="noopener noreferrer" className="flex items-center">
                   <div className="flex items-baseline">
                     <span className="text-lg font-bold tracking-tight">I</span>
@@ -133,22 +138,22 @@ export default function Navbar() {
                 </a>
               </Button>
               <div className="hidden md:flex gap-2">
-                <Button variant="ghost" asChild className="text-blue-700 hover:bg-blue-50">
+                <Button asChild className="bg-[#044caa] text-white hover:bg-[#033d88]">
                   <Link href="/iniciar-sesion">Iniciar sesión</Link>
                 </Button>
-                <Button asChild className="bg-blue-700 text-white hover:bg-blue-800">
+                <Button asChild className="bg-[#044caa] text-white hover:bg-[#033d88]">
                   <Link href="/registro">Registrarse</Link>
                 </Button>
               </div>
 
-              <Sheet>
+              <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
                 <SheetTrigger asChild className="md:hidden">
-                  <Button variant="ghost" size="icon" className="text-blue-700 hover:bg-blue-50">
+                  <Button variant="ghost" size="icon" className="text-[#044caa] hover:bg-blue-50">
                     <Menu className="h-5 w-5" />
                     <span className="sr-only">Menú</span>
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="right" className="bg-white text-blue-900 border-blue-100">
+                <SheetContent side="right" className="bg-white text-[#044caa] border-blue-100">
                   <div className="flex flex-col gap-6 mt-6">
                     <div className="flex items-center gap-2">
                       <div className="relative h-8 w-8">
@@ -162,30 +167,43 @@ export default function Navbar() {
                       <span className="font-bold text-lg">Sistema Estatal de Investigadores</span>
                     </div>
                     <div className="flex flex-col gap-2">
-                      <Button variant="ghost" className="justify-start text-blue-700 hover:bg-blue-50" asChild>
-                        <Link href="/explorar">Explorar</Link>
+                      <Button variant="ghost" className="justify-start text-[#044caa] hover:bg-blue-50" asChild>
+                        <Link href="/explorar" onClick={handleLinkClick}>
+                          Explorar
+                        </Link>
                       </Button>
-                      <Button variant="ghost" className="justify-start text-blue-700 hover:bg-blue-50" asChild>
-                        <Link href="/investigadores">Investigadores</Link>
+                      <Button variant="ghost" className="justify-start text-[#044caa] hover:bg-blue-50" asChild>
+                        <Link href="/investigadores" onClick={handleLinkClick}>
+                          Investigadores
+                        </Link>
                       </Button>
-                      <Button variant="ghost" className="justify-start text-blue-700 hover:bg-blue-50" asChild>
-                        <Link href="/proyectos">Proyectos</Link>
+                      <Button variant="ghost" className="justify-start text-[#044caa] hover:bg-blue-50" asChild>
+                        <Link href="/proyectos" onClick={handleLinkClick}>
+                          Proyectos
+                        </Link>
                       </Button>
-                      <Button variant="ghost" className="justify-start text-blue-700 hover:bg-blue-50" asChild>
-                        <Link href="/publicaciones">Publicaciones</Link>
+                      <Button variant="ghost" className="justify-start text-[#044caa] hover:bg-blue-50" asChild>
+                        <Link href="/publicaciones" onClick={handleLinkClick}>
+                          Publicaciones
+                        </Link>
                       </Button>
-                      <Button variant="ghost" className="justify-start text-blue-700 hover:bg-blue-50" asChild>
-                        <Link href="/instituciones">Instituciones</Link>
+                      <Button variant="ghost" className="justify-start text-[#044caa] hover:bg-blue-50" asChild>
+                        <Link href="/instituciones" onClick={handleLinkClick}>
+                          Instituciones
+                        </Link>
                       </Button>
-                      <Button variant="ghost" className="justify-start text-blue-700 hover:bg-blue-50" asChild>
-                        <Link href="/campos">Campos</Link>
+                      <Button variant="ghost" className="justify-start text-[#044caa] hover:bg-blue-50" asChild>
+                        <Link href="/campos" onClick={handleLinkClick}>
+                          Campos
+                        </Link>
                       </Button>
-                      <Button className="justify-start bg-blue-700 text-white hover:bg-blue-800" asChild>
+                      <Button className="justify-start bg-[#916bc4] text-white hover:bg-[#7d5baa]" asChild>
                         <a
                           href="https://i2c.com.mx/"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center"
+                          onClick={handleLinkClick}
                         >
                           <div className="flex items-baseline">
                             <span className="text-lg font-bold tracking-tight">I</span>
@@ -194,11 +212,15 @@ export default function Navbar() {
                           </div>
                         </a>
                       </Button>
-                      <Button variant="ghost" className="justify-start text-blue-700 hover:bg-blue-50" asChild>
-                        <Link href="/iniciar-sesion">Iniciar sesión</Link>
+                      <Button className="justify-start bg-[#044caa] text-white hover:bg-[#033d88]" asChild>
+                        <Link href="/iniciar-sesion" onClick={handleLinkClick}>
+                          Iniciar sesión
+                        </Link>
                       </Button>
-                      <Button className="mt-2 bg-blue-700 text-white hover:bg-blue-800" asChild>
-                        <Link href="/registro">Registrarse</Link>
+                      <Button className="mt-2 bg-[#044caa] text-white hover:bg-[#033d88]" asChild>
+                        <Link href="/registro" onClick={handleLinkClick}>
+                          Registrarse
+                        </Link>
                       </Button>
                     </div>
                   </div>
@@ -220,13 +242,13 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWit
           <a
             ref={ref}
             className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-50 text-blue-900",
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-50 text-[#044caa]",
               className,
             )}
             {...props}
           >
             <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-blue-600">{children}</p>
+            <p className="line-clamp-2 text-sm leading-snug text-[#044caa]">{children}</p>
           </a>
         </NavigationMenuLink>
       </li>

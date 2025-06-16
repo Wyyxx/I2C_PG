@@ -10,7 +10,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
       return NextResponse.json({ error: "ID de investigador inválido" }, { status: 400 })
     }
 
-    // Obtener el investigador por ID
+    // Get investigator by ID from mock data
     const investigador = await obtenerInvestigadorPorId(id)
 
     if (!investigador) {

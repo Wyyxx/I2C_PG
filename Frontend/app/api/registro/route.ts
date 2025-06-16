@@ -7,7 +7,7 @@ export async function POST(request: NextRequest) {
     const data = await request.json()
     console.log("Datos recibidos para registro:", data)
 
-    // Validar datos obligatorios
+    // Validate required data
     if (!data.nombre_completo) {
       console.error("Falta el nombre completo")
       return NextResponse.json({ error: "El nombre completo es obligatorio" }, { status: 400 })
@@ -18,12 +18,12 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "El correo electrónico es obligatorio" }, { status: 400 })
     }
 
-    // Añadir fecha de registro si no existe
+    // Add registration date if it doesn't exist
     if (!data.fecha_registro) {
       data.fecha_registro = new Date().toISOString()
     }
 
-    // Guardar en la base de datos SQLite
+    // Save to mock database
     try {
       const resultado = await guardarInvestigador(data)
       console.log("Resultado del guardado:", resultado)
@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
           id: resultado.id,
         })
       } else {
-        // Si no fue exitoso pero tenemos un ID, es porque es un duplicado
+        // If not successful but we have an ID, it's because it's a duplicate
         if (resultado.id) {
           return NextResponse.json(
             {
@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
               duplicado: true,
             },
             { status: 409 },
-          ) // 409 Conflict para duplicados
+          ) // 409 Conflict for duplicates
         } else {
           return NextResponse.json(
             {

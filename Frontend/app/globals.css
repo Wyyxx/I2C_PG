@@ -4,24 +4,24 @@
 
 :root {
   --background: 0 0% 100%;
-  --foreground: 210 100% 35%;
+  --foreground: 210 100% 34%;
   --card: 0 0% 100%;
-  --card-foreground: 210 100% 35%;
+  --card-foreground: 210 100% 34%;
   --popover: 0 0% 100%;
-  --popover-foreground: 210 100% 35%;
+  --popover-foreground: 210 100% 34%;
   --primary: 0 0% 100%;
-  --primary-foreground: 210 100% 35%;
+  --primary-foreground: 210 100% 34%;
   --secondary: 210 40% 96.1%;
-  --secondary-foreground: 210 100% 35%;
+  --secondary-foreground: 210 100% 34%;
   --muted: 210 40% 96.1%;
-  --muted-foreground: 210 70% 53%;
+  --muted-foreground: 210 100% 34%;
   --accent: 210 40% 96.1%;
-  --accent-foreground: 210 100% 35%;
+  --accent-foreground: 210 100% 34%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
-  --ring: 210 100% 35%;
+  --ring: 210 100% 34%;
   --radius: 0.5rem;
 }
 
@@ -49,7 +49,7 @@
 
 body {
   background-color: #ffffff;
-  color: #0056b3;
+  color: #044caa;
 }
 
 @layer base {
@@ -59,4 +59,12 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Definición de variables CSS para los colores principales */
+:root {
+  --color-blue-primary: #044caa;
+  --color-blue-hover: #033d88;
+  --color-purple-i2c: #916bc4;
+  --color-purple-i2c-hover: #7d5baa;
 }

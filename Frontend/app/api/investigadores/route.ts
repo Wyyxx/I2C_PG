@@ -4,7 +4,7 @@ import { obtenerInvestigadores } from "@/lib/db"
 
 export async function GET(request: NextRequest) {
   try {
-    // Obtener todos los investigadores de la base de datos
+    // Get all investigators from mock data
     const investigadores = await obtenerInvestigadores()
 
     return NextResponse.json(investigadores)

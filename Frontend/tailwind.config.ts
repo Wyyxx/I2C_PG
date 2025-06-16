@@ -24,14 +24,26 @@ const config = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "#ffffff", // White as main background
-        foreground: "#0056b3", // Blue text instead of dark gray
+        foreground: "#044caa", // Updated blue text color
+        blue: {
+          50: "#eef6ff", // Lightest blue - for subtle backgrounds
+          100: "#d8ebff", // Very light blue - for borders, backgrounds
+          200: "#b1d5ff", // Light blue - for hover states, secondary elements
+          300: "#8abeff", // Medium-light blue
+          400: "#63a7ff", // Medium blue
+          500: "#3c90ff", // Standard blue
+          600: "#1a78f5", // Medium-dark blue
+          700: "#044caa", // Our primary blue - for buttons, primary elements
+          800: "#033d88", // Darker blue - for hover states
+          900: "#022e66", // Darkest blue - for text, headers
+        },
         primary: {
           DEFAULT: "#ffffff", // White
-          foreground: "#0056b3", // Blue text on white
+          foreground: "#044caa", // Updated blue text color
         },
         secondary: {
           DEFAULT: "#f8f9fa", // Light gray
-          foreground: "#0056b3", // Blue text
+          foreground: "#044caa", // Updated blue text color
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -39,19 +51,19 @@ const config = {
         },
         muted: {
           DEFAULT: "#f1f3f5", // Very light gray
-          foreground: "#4a86c7", // Medium blue text
+          foreground: "#044caa", // Updated blue text color
         },
         accent: {
           DEFAULT: "#f8f9fa", // Light gray
-          foreground: "#0056b3", // Blue text
+          foreground: "#044caa", // Updated blue text color
         },
         popover: {
           DEFAULT: "#ffffff", // White
-          foreground: "#0056b3", // Blue text
+          foreground: "#044caa", // Updated blue text color
         },
         card: {
           DEFAULT: "#ffffff", // White
-          foreground: "#0056b3", // Blue text
+          foreground: "#044caa", // Updated blue text color
         },
       },
       borderRadius: {

@@ -61,7 +61,7 @@ export default function InvestigadoresAdmin() {
         console.error("Error al cargar investigadores:", error)
         setError("No se pudieron cargar los investigadores. Usando datos de ejemplo.")
 
-        // Datos de ejemplo como fallback
+        // Fallback example data
         const investigadoresData = [
           {
             id: 1,
