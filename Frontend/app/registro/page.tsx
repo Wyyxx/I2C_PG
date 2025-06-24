@@ -124,35 +124,50 @@ export default function RegistroPage() {
     setError(null)
 
     try {
-      // Simular procesamiento de OCR (sin implementar la lógica real)
-      await new Promise((resolve) => setTimeout(resolve, 4000))
+      // Crear FormData para enviar el archivo
+      const formData = new FormData()
+      formData.append('file', selectedFile)
 
-      // Datos simulados que se "extraerían" del PDF
-      // NOTA: linea_investigacion se mantiene vacía para captura manual
-      const simulatedData = {
-        nombre_completo: "Dr. Juan Pérez García",
-        correo: "juan.perez@universidad.edu",
-        no_cvu: "123456",
-        telefono: "614-123-4567",
-        curp: "PEGJ800101HCHRNN09",
-        rfc: "PEGJ800101ABC",
-        ultimo_grado_estudios: "Doctorado en Ciencias de la Computación - Universidad Autónoma de Chihuahua",
-        empleo_actual: "Profesor-Investigador Titular C - Universidad Autónoma de Chihuahua",
-        fecha_nacimiento: "1980-01-01",
-        // linea_investigacion se mantiene vacía intencionalmente
-        // password y confirm_password también se mantienen vacías
+      // Llamar al endpoint de OCR
+      const response = await fetch('/api/ocr', {
+        method: 'POST',
+        body: formData,
+      })
+
+      const responseData = await response.json()
+
+      if (!response.ok) {
+        throw new Error(responseData.error || 'Error al procesar el PDF')
       }
 
+      if (!responseData.success) {
+        throw new Error(responseData.message || 'Error al procesar el PDF')
+      }
+
+      // Extraer los datos del PDF
+      const extractedData = responseData.data
+
+      // Actualizar el formulario con los datos extraídos
       setFormData((prev) => ({
         ...prev,
-        ...simulatedData,
-        linea_investigacion: "", // Asegurar que siempre esté vacía
-        password: "", // Asegurar que siempre esté vacía
-        confirm_password: "", // Asegurar que siempre esté vacía
+        nombre_completo: extractedData.nombre_completo || "",
+        correo: extractedData.correo || "",
+        no_cvu: extractedData.no_cvu || "",
+        telefono: extractedData.telefono || "",
+        curp: extractedData.curp || "",
+        rfc: extractedData.rfc || "",
+        ultimo_grado_estudios: extractedData.ultimo_grado_estudios || "",
+        empleo_actual: extractedData.empleo_actual || "",
+        fecha_nacimiento: extractedData.fecha_nacimiento || "",
+        linea_investigacion: "", // Siempre vacío para captura manual
+        nacionalidad: extractedData.nacionalidad || "Mexicana",
+        password: "", // Siempre vacío para captura manual
+        confirm_password: "", // Siempre vacío para captura manual
       }))
+      
       setOcrCompleted(true)
     } catch (error) {
-      setError("Error al procesar el PDF. Por favor intenta de nuevo.")
+      setError(`Error al procesar el PDF: ${error instanceof Error ? error.message : "Error desconocido"}`)
     } finally {
       setIsProcessingPDF(false)
     }

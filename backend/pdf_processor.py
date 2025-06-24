@@ -1,5 +1,5 @@
 from utils.pdf_extractor import extraer_datos_pdf
-from config.database import get_db_connection, init_db
+from config.database import get_db_connection
 from datetime import datetime
 
 def guardar_en_db(datos):
@@ -10,7 +10,7 @@ def guardar_en_db(datos):
         datos (dict): Diccionario con los datos extraídos del PDF
         
     Returns:
-        bool: True si se guardó correctamente, False si hubo error
+        dict: Resultado de la operación
     """
     conn = None
     try:
@@ -18,32 +18,62 @@ def guardar_en_db(datos):
         cur = conn.cursor()
         
         # Verificar si ya existe el CURP
-        if datos.get('curp') != "NO DETECTADO":
+        if datos.get('curp'):
             cur.execute("SELECT id FROM investigadores WHERE curp = %s", (datos.get('curp'),))
             if cur.fetchone():
-                raise Exception(f"El CURP {datos.get('curp')} ya está registrado.")
+                return {
+                    "success": False,
+                    "duplicado": True,
+                    "message": f"⚠️ El CURP {datos.get('curp')} ya está registrado en el sistema.",
+                    "id": None
+                }
+        
+        # Verificar si ya existe el correo
+        if datos.get('correo'):
+            cur.execute("SELECT id FROM investigadores WHERE correo = %s", (datos.get('correo'),))
+            if cur.fetchone():
+                return {
+                    "success": False,
+                    "duplicado": True,
+                    "message": f"⚠️ El correo {datos.get('correo')} ya está registrado en el sistema.",
+                    "id": None
+                }
         
         # Preparar los campos y valores para la inserción
         campos = list(datos.keys())
-        valores = [datos[c] if c != 'fecha_nacimiento' else None for c in campos]
+        valores = [datos[c] for c in campos]
         
         query = f"""
             INSERT INTO investigadores ({', '.join(campos)})
             VALUES ({', '.join(['%s' for _ in campos])})
+            RETURNING id
         """
         cur.execute(query, tuple(valores))
+        resultado = cur.fetchone()
+        nuevo_id = resultado[0] if resultado else None
         conn.commit()
         
         cur.close()
         conn.close()
-        return True
+        
+        return {
+            "success": True,
+            "duplicado": False,
+            "message": "✅ Registro completado exitosamente",
+            "id": nuevo_id
+        }
         
     except Exception as e:
         if conn:
             conn.close()
-        raise Exception(f"Error al guardar en la base de datos: {str(e)}")
+        return {
+            "success": False,
+            "duplicado": False,
+            "message": f"Error al guardar en la base de datos: {str(e)}",
+            "id": None
+        }
 
-def procesar_pdf(path_pdf, guardar_db=True):
+def procesar_pdf(path_pdf, guardar_db=False):
     """
     Función principal para procesar un archivo PDF y extraer sus datos
     
@@ -58,13 +88,20 @@ def procesar_pdf(path_pdf, guardar_db=True):
         datos = extraer_datos_pdf(path_pdf)
         
         if guardar_db:
-            guardar_en_db(datos)
-            
-        return {
-            "success": True,
-            "data": datos,
-            "message": "Procesamiento exitoso"
-        }
+            resultado_db = guardar_en_db(datos)
+            return {
+                "success": resultado_db["success"],
+                "data": datos,
+                "message": resultado_db["message"],
+                "duplicado": resultado_db.get("duplicado", False),
+                "id": resultado_db.get("id")
+            }
+        else:
+            return {
+                "success": True,
+                "data": datos,
+                "message": "Datos extraídos exitosamente"
+            }
     except Exception as e:
         return {
             "success": False,

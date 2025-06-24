@@ -31,21 +31,25 @@ def init_db():
         conn = get_db_connection()
         cur = conn.cursor()
         
-        # Crear tabla de investigadores
+        # Crear tabla de investigadores con todos los campos del formulario
         cur.execute("""
             CREATE TABLE IF NOT EXISTS investigadores (
                 id SERIAL PRIMARY KEY,
-                nombre VARCHAR(100),
-                apellido_paterno VARCHAR(100),
-                apellido_materno VARCHAR(100),
+                nombre_completo VARCHAR(200),
                 curp VARCHAR(18) UNIQUE,
                 rfc VARCHAR(13),
+                no_cvu VARCHAR(50),
+                correo VARCHAR(100) UNIQUE,
+                telefono VARCHAR(20),
+                ultimo_grado_estudios TEXT,
+                empleo_actual TEXT,
+                linea_investigacion TEXT,
+                nacionalidad VARCHAR(100),
                 fecha_nacimiento DATE,
-                email VARCHAR(100),
-                telefono VARCHAR(10),
-                institucion VARCHAR(200),
-                departamento VARCHAR(200),
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                password VARCHAR(255),
+                fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                origen VARCHAR(50),
+                archivo_procesado VARCHAR(255)
             )
         """)
         
