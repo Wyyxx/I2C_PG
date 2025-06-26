@@ -42,17 +42,6 @@ class RegistroData(BaseModel):
 async def startup_event():
     init_db()
 
-@app.get("/health")
-async def health_check():
-    """
-    Endpoint de health check para Railway
-    """
-    return {
-        "status": "healthy",
-        "message": "API funcionando correctamente",
-        "timestamp": "2024-01-01T00:00:00Z"
-    }
-
 @app.post("/procesar-pdf")
 async def procesar_pdf_endpoint(file: UploadFile = File(...)):
     """
