@@ -7,50 +7,32 @@ import { SearchBar } from "@/components/search-bar"
 
 // Datos de ejemplo para estadísticas
 const estadisticas = {
-  investigadores: 124,
-  proyectos: 87,
-  publicaciones: 256,
-  instituciones: 18,
-  colaboraciones: 45,
-  areas: 12,
+  investigadores: 0,
+  proyectos: 0,
+  publicaciones: 0,
+  instituciones: 0,
+  colaboraciones: 0,
+  areas: 0,
 }
 
-// Áreas de investigación populares
+// Áreasde investigación populares
 const areasPopulares = [
-  { nombre: "Inteligencia Artificial", investigadores: 23, proyectos: 15, color: "bg-blue-100 text-blue-800" },
-  { nombre: "Neurociencia", investigadores: 18, proyectos: 12, color: "bg-purple-100 text-purple-800" },
-  { nombre: "Energías Renovables", investigadores: 16, proyectos: 10, color: "bg-green-100 text-green-800" },
-  { nombre: "Biotecnología", investigadores: 14, proyectos: 8, color: "bg-orange-100 text-orange-800" },
-  { nombre: "Ciencias Ambientales", investigadores: 12, proyectos: 9, color: "bg-teal-100 text-teal-800" },
-  { nombre: "Robótica", investigadores: 11, proyectos: 7, color: "bg-indigo-100 text-indigo-800" },
+  { nombre: "Inteligencia Artificial", investigadores: 0, proyectos: 0, color: "bg-blue-100 text-blue-800" },
+  { nombre: "Neurociencia", investigadores: 0, proyectos: 0, color: "bg-purple-100 text-purple-800" },
+  { nombre: "Energías Renovables", investigadores: 0, proyectos: 0, color: "bg-green-100 text-green-800" },
+  { nombre: "Biotecnología", investigadores: 0, proyectos: 0, color: "bg-orange-100 text-orange-800" },
+  { nombre: "Ciencias Ambientales", investigadores: 0, proyectos: 0, color: "bg-teal-100 text-teal-800" },
+  { nombre: "Robótica", investigadores: 0, proyectos: 0, color: "bg-indigo-100 text-indigo-800" },
 ]
 
-// Instituciones destacadas
+// Instituciones destacadas LLENAR CON INFORMACION DE LOS REPORTES SUBIDOS DE LOS PDFS
 const institucionesDestacadas = [
   {
-    nombre: "Universidad Autónoma de Chihuahua",
+    nombre: "PROXIMAMENTE",
     investigadores: 45,
     proyectos: 32,
     areas: ["Neurociencia", "Biotecnología", "Ciencias Sociales"],
-  },
-  {
-    nombre: "Instituto Tecnológico de Chihuahua",
-    investigadores: 28,
-    proyectos: 18,
-    areas: ["Inteligencia Artificial", "Robótica", "Ingeniería"],
-  },
-  {
-    nombre: "Centro de Investigación en Materiales Avanzados",
-    investigadores: 22,
-    proyectos: 15,
-    areas: ["Materiales", "Nanotecnología", "Energía"],
-  },
-  {
-    nombre: "Universidad Tecnológica de Ciudad Juárez",
-    investigadores: 19,
-    proyectos: 12,
-    areas: ["Agricultura", "Sostenibilidad", "IoT"],
-  },
+  }
 ]
 
 export default function ExplorarPage() {
@@ -176,7 +158,7 @@ export default function ExplorarPage() {
                   <CardContent className="pt-6">
                     <div className="flex justify-between items-start mb-3">
                       <Badge className={area.color}>{area.nombre}</Badge>
-                      <TrendingUp className="h-4 w-4 text-blue-500" />
+                      <span className="block w-4 h-0.5 bg-blue-300 rounded-full mt-2" title="Sin cambio"></span>
                     </div>
                     <div className="space-y-2">
                       <div className="flex justify-between text-sm">
@@ -204,30 +186,39 @@ export default function ExplorarPage() {
             </Button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {institucionesDestacadas.map((institucion, index) => (
-              <Link key={index} href={`/instituciones/${institucion.nombre.toLowerCase().replace(/\s+/g, "-")}`}>
-                <Card className="bg-white border-blue-100 hover:shadow-md transition-shadow cursor-pointer">
-                  <CardHeader>
-                    <CardTitle className="text-blue-900">{institucion.nombre}</CardTitle>
-                    <CardDescription className="text-blue-600">
-                      {institucion.investigadores} investigadores • {institucion.proyectos} proyectos
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-2">
-                      <p className="text-sm font-medium text-blue-900">Áreas principales:</p>
-                      <div className="flex flex-wrap gap-2">
-                        {institucion.areas.map((area, areaIndex) => (
-                          <Badge key={areaIndex} variant="secondary" className="bg-blue-50 text-blue-700">
-                            {area}
-                          </Badge>
-                        ))}
+            {institucionesDestacadas.map((institucion, index) =>
+              institucion.nombre === "PROXIMAMENTE" ? (
+                <div
+                  key={index}
+                  className="flex justify-center items-center h-40 w-full bg-gray-100 rounded-lg shadow-md border-2 border-dashed border-gray-400"
+                >
+                  <span className="text-2xl font-bold text-gray-500">PRÓXIMAMENTE</span>
+                </div>
+              ) : (
+                <Link key={index} href={`/instituciones/${institucion.nombre.toLowerCase().replace(/\s+/g, "-")}`}>
+                  <Card className="bg-white border-blue-100 hover:shadow-md transition-shadow cursor-pointer">
+                    <CardHeader>
+                      <CardTitle className="text-blue-900">{institucion.nombre}</CardTitle>
+                      <CardDescription className="text-blue-600">
+                        {institucion.investigadores} investigadores • {institucion.proyectos} proyectos
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-2">
+                        <p className="text-sm font-medium text-blue-900">Áreas principales:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {institucion.areas.map((area, areaIndex) => (
+                            <Badge key={areaIndex} variant="secondary" className="bg-blue-50 text-blue-700">
+                              {area}
+                            </Badge>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
+                    </CardContent>
+                  </Card>
+                </Link>
+              )
+            )}
           </div>
         </div>
       </div>

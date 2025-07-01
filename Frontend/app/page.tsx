@@ -10,6 +10,7 @@ import { OfficeLocations } from "@/components/office-locations"
 export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8">
+      
       {/* Hero Section */}
       <section className="py-12 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -101,7 +102,7 @@ export default function Home() {
             <Link href="/investigadores">Ver todos</Link>
           </Button>
         </div>
-        <FeaturedResearchers />
+        {/* <FeaturedResearchers /> MODIFICAR ESTE COMPONENTE*/}
       </section>
 
       {/* Recent Projects */}
@@ -112,7 +113,7 @@ export default function Home() {
             <Link href="/proyectos">Ver todos</Link>
           </Button>
         </div>
-        <RecentProjects />
+        {/* <RecentProjects /> MODIFICAR ESTE COMPONENTE*/}
       </section>
 
       {/* Office Locations */}

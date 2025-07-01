@@ -81,7 +81,7 @@ export default function Navbar() {
                     <NavigationMenuTrigger className="text-[#044caa]">Explorar</NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-2 bg-white">
-                        <li className="row-span-3">
+                        <li className="row-span-4">
                           <NavigationMenuLink asChild>
                             <a
                               className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-gray-50 to-gray-100 p-6 no-underline outline-none focus:shadow-md"
@@ -103,9 +103,17 @@ export default function Navbar() {
                         <ListItem href="/instituciones" title="Instituciones">
                           Explora universidades y centros de investigación.
                         </ListItem>
-                        <ListItem href="/campos" title="Campos de estudio">
-                          Navega por diferentes áreas de conocimiento.
-                        </ListItem>
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <a
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-50 text-[#044caa] h-full flex flex-col justify-center"
+                              href="/campos"
+                            >
+                              <div className="text-sm font-medium leading-none">Campos de estudio</div>
+                              <p className="line-clamp-2 text-sm leading-snug text-[#044caa]">Navega por diferentes áreas de conocimiento.</p>
+                            </a>
+                          </NavigationMenuLink>
+                        </li>
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>

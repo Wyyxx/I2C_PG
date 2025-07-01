@@ -16,55 +16,7 @@ const convocatorias = [
     montoMaximo: "$500,000 MXN",
     categoria: "Energía",
     estado: "Abierta",
-  },
-  {
-    id: 2,
-    titulo: "Programa de Estímulos a la Innovación Tecnológica",
-    organizacion: "Secretaría de Innovación y Desarrollo Económico",
-    descripcion:
-      "Programa destinado a incentivar la inversión en investigación y desarrollo tecnológico en empresas chihuahuenses, con énfasis en la vinculación con instituciones académicas.",
-    fechaApertura: "2023-06-01",
-    fechaCierre: "2023-08-15",
-    montoMaximo: "$750,000 MXN",
-    categoria: "Desarrollo Tecnológico",
-    estado: "Abierta",
-  },
-  {
-    id: 3,
-    titulo: "Becas para Estancias de Investigación Internacional",
-    organizacion: "Universidad Autónoma de Chihuahua",
-    descripcion:
-      "Programa de becas para realizar estancias de investigación en instituciones internacionales de prestigio, dirigido a investigadores y estudiantes de posgrado.",
-    fechaApertura: "2023-04-10",
-    fechaCierre: "2023-06-15",
-    montoMaximo: "$300,000 MXN",
-    categoria: "Movilidad Académica",
-    estado: "Cerrada",
-  },
-  {
-    id: 4,
-    titulo: "Fondo para Investigación en Salud Pública",
-    organizacion: "Secretaría de Salud del Estado de Chihuahua",
-    descripcion:
-      "Financiamiento para proyectos de investigación orientados a resolver problemas de salud pública prioritarios en el estado de Chihuahua.",
-    fechaApertura: "2023-07-01",
-    fechaCierre: "2023-09-30",
-    montoMaximo: "$600,000 MXN",
-    categoria: "Salud",
-    estado: "Próxima",
-  },
-  {
-    id: 5,
-    titulo: "Apoyo a Publicaciones Científicas",
-    organizacion: "Consejo Estatal de Ciencia, Tecnología e Innovación de Chihuahua",
-    descripcion:
-      "Programa para apoyar la publicación de artículos científicos en revistas indexadas internacionales, incluyendo costos de traducción y publicación.",
-    fechaApertura: "2023-03-15",
-    fechaCierre: "2023-11-30",
-    montoMaximo: "$50,000 MXN por publicación",
-    categoria: "Publicaciones",
-    estado: "Abierta",
-  },
+  }
 ]
 
 export default function ConvocatoriasPage() {

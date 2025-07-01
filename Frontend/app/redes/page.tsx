@@ -21,27 +21,7 @@ const redesNacionales = [
     instituciones: 18,
     categoria: "Energía",
     imagen: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 2,
-    nombre: "Red Mexicana de Investigadores en Biotecnología",
-    descripcion:
-      "Comunidad de científicos dedicados a la investigación biotecnológica, con énfasis en aplicaciones para la agricultura y la salud.",
-    miembros: 85,
-    instituciones: 12,
-    categoria: "Biotecnología",
-    imagen: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 3,
-    nombre: "Red de Investigación en Ciencias Sociales y Humanidades",
-    descripcion:
-      "Plataforma colaborativa para investigadores en ciencias sociales, enfocada en estudios interdisciplinarios sobre problemáticas nacionales.",
-    miembros: 150,
-    instituciones: 22,
-    categoria: "Ciencias Sociales",
-    imagen: "/placeholder.svg?height=200&width=300",
-  },
+  }
 ]
 
 const redesInternacionales = [
@@ -54,27 +34,7 @@ const redesInternacionales = [
     instituciones: 45,
     categoria: "Medio Ambiente",
     imagen: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 2,
-    nombre: "Alianza Global para la Investigación en Inteligencia Artificial",
-    descripcion:
-      "Colaboración internacional para el desarrollo ético y responsable de tecnologías de inteligencia artificial.",
-    paises: 32,
-    instituciones: 60,
-    categoria: "Tecnología",
-    imagen: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 3,
-    nombre: "Red Iberoamericana de Investigación en Salud Pública",
-    descripcion:
-      "Comunidad de investigadores de países iberoamericanos enfocados en mejorar los sistemas de salud pública y abordar desafíos sanitarios regionales.",
-    paises: 12,
-    instituciones: 30,
-    categoria: "Salud",
-    imagen: "/placeholder.svg?height=200&width=300",
-  },
+  }
 ]
 
 const eventos = [
@@ -88,29 +48,7 @@ const eventos = [
     modalidad: "Presencial",
     categoria: "Multidisciplinario",
     imagen: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 2,
-    nombre: "Simposio de Innovación Tecnológica",
-    descripcion:
-      "Encuentro especializado en las últimas tendencias tecnológicas y su aplicación en la investigación científica.",
-    fecha: "5-7 Noviembre, 2023",
-    ubicacion: "Monterrey, México",
-    modalidad: "Híbrido",
-    categoria: "Tecnología",
-    imagen: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 3,
-    nombre: "Foro de Colaboración Academia-Industria",
-    descripcion:
-      "Espacio de diálogo entre investigadores y representantes de la industria para fomentar proyectos colaborativos.",
-    fecha: "12 Diciembre, 2023",
-    ubicacion: "Chihuahua, México",
-    modalidad: "Presencial",
-    categoria: "Vinculación",
-    imagen: "/placeholder.svg?height=200&width=300",
-  },
+  }
 ]
 
 export default function RedesPage() {

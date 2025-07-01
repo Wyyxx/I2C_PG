@@ -22,18 +22,45 @@ export default function IniciarSesionPage() {
     setIsLoading(true)
 
     try {
-      // Simulación de inicio de sesión
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-
-      // En una implementación real, aquí se enviarían las credenciales al servidor
-      console.log("Iniciando sesión con:", { email, password })
-
-      // Redirigir al dashboard
-      router.push("/dashboard")
+      // TODO: Implementar lógica de autenticación con backend
+      // - Validar credenciales contra la base de datos
+      // - Manejar tokens de sesión
+      // - Redirigir según el rol del usuario
+      console.log("Credenciales a enviar:", { email, password })
+      
+      // TODO: Reemplazar con llamada real al API
+      // const response = await fetch('/api/auth/login', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ email, password })
+      // })
+      
     } catch (error) {
       console.error("Error al iniciar sesión:", error)
+      // TODO: Manejar errores de autenticación
     } finally {
       setIsLoading(false)
+    }
+  }
+
+  const handleEmailCodeVerification = async () => {
+    try {
+      // TODO: Implementar envío de código por email
+      // - Validar que el email existe en la base de datos
+      // - Generar y enviar código de verificación
+      // - Redirigir a página de verificación de código
+      console.log("Enviando código a:", email)
+      
+      // TODO: Reemplazar con llamada real al API
+      // const response = await fetch('/api/auth/send-code', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ email })
+      // })
+      
+    } catch (error) {
+      console.error("Error al enviar código:", error)
+      // TODO: Manejar errores de envío
     }
   }
 
@@ -160,10 +187,7 @@ export default function IniciarSesionPage() {
 
                 <Button
                   type="button"
-                  onClick={() => {
-                    // La lógica será implementada por el especialista de backend
-                    alert("Esta funcionalidad será implementada por el especialista de backend")
-                  }}
+                  onClick={handleEmailCodeVerification}
                   className="w-full h-11 sm:h-12 border-2 border-blue-200 bg-white text-blue-700 hover:bg-blue-50 hover:border-blue-300 rounded-xl font-semibold transition-all duration-200 transform hover:-translate-y-0.5"
                 >
                   <Mail className="w-5 h-5 mr-2" />

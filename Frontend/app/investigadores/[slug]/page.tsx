@@ -44,17 +44,7 @@ const researcher = {
       position: "Investigadora Principal",
       institution: "Universidad Nacional Autónoma",
       period: "2015 - Presente",
-    },
-    {
-      position: "Investigadora Asociada",
-      institution: "Instituto de Neurociencias",
-      period: "2010 - 2015",
-    },
-    {
-      position: "Investigadora Postdoctoral",
-      institution: "Universidad de California",
-      period: "2008 - 2010",
-    },
+    }
   ],
   projects: [
     {
@@ -65,20 +55,6 @@ const researcher = {
       date: "2020 - Presente",
       slug: "patrones-actividad-neuronal-sueno-rem",
     },
-    {
-      id: 2,
-      title: "Efectos de la privación del sueño en la función cognitiva",
-      description: "Estudio sobre cómo la falta de sueño afecta las capacidades cognitivas y el rendimiento mental.",
-      date: "2018 - 2021",
-      slug: "efectos-privacion-sueno-funcion-cognitiva",
-    },
-    {
-      id: 3,
-      title: "Biomarcadores neuronales para trastornos del sueño",
-      description: "Identificación de marcadores biológicos para el diagnóstico temprano de trastornos del sueño.",
-      date: "2016 - 2019",
-      slug: "biomarcadores-neuronales-trastornos-sueno",
-    },
   ],
   publications: [
     {
@@ -87,28 +63,7 @@ const researcher = {
       journal: "Revista de Neurociencia Clínica",
       year: "2022",
       doi: "10.1234/rnc.2022.001",
-    },
-    {
-      id: 2,
-      title: "Correlatos neurales del procesamiento de la memoria durante el sueño REM",
-      journal: "Journal of Sleep Research",
-      year: "2020",
-      doi: "10.1234/jsr.2020.002",
-    },
-    {
-      id: 3,
-      title: "Efectos de la privación crónica del sueño en la plasticidad sináptica",
-      journal: "Neuroscience",
-      year: "2019",
-      doi: "10.1234/neuro.2019.003",
-    },
-    {
-      id: 4,
-      title: "Mecanismos neuronales del procesamiento de la memoria durante el sueño",
-      journal: "Nature Neuroscience",
-      year: "2017",
-      doi: "10.1234/nn.2017.004",
-    },
+    }
   ],
 }
 
