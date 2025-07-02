@@ -85,11 +85,18 @@ export default function Error({ error, reset }: ErrorProps) {
             </Link>
           </Button>
           
-          <Button size="lg" variant="outline" asChild className="border-gray-200 text-gray-700 hover:bg-gray-50">
-            <Link href="javascript:history.back()">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Volver atrás
-            </Link>
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="border-gray-200 text-gray-700 hover:bg-gray-50"
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                window.history.back()
+              }
+            }}
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Volver atrás
           </Button>
         </div>
 

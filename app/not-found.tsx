@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -55,11 +57,18 @@ export default function NotFound() {
             </Link>
           </Button>
           
-          <Button size="lg" variant="ghost" asChild className="text-blue-600 hover:bg-blue-50">
-            <Link href="javascript:history.back()">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Volver atrás
-            </Link>
+          <Button 
+            size="lg" 
+            variant="ghost" 
+            className="text-blue-600 hover:bg-blue-50"
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                window.history.back()
+              }
+            }}
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Volver atrás
           </Button>
         </div>
 
